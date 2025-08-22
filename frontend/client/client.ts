@@ -1,5 +1,5 @@
 // frontend/client/client.ts
-const BASE = import.meta.env.VITE_API_BASE ?? 'https://lernout-hauspie.onrender.com';
+const BASE = import.meta.env.VITE_API_BASE ?? '127.0.0.1:8000';
 
 export async function http<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {

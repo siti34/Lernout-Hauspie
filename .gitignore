@@ -12,6 +12,7 @@ backend/__pycache__/
 
 # Frontend 
 frontend/.env
+frontend/.env.local/
 frontend/node_modules/
 frontend/dist/
 frontend/dist-ssr/
@@ -50,5 +51,6 @@ frontend/*.builder.dev.js
 
 langflow-application/docker.env
 langflow-application/.venv/
+langflow-application/ma_key.json
 render.yaml
 

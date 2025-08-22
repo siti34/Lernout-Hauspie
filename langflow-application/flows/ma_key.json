@@ -1,0 +1,194 @@
+{
+  "data": {
+    "nodes": [
+      {
+        "id": "chat-input",
+        "type": "ChatInput",
+        "position": { "x": 100, "y": 100 },
+        "data": {
+          "node": {
+            "template": {
+              "input_value": {
+                "value": "",
+                "type": "str"
+              },
+              "sender": {
+                "value": "User",
+                "type": "str"
+              },
+              "sender_name": {
+                "value": "User",
+                "type": "str"
+              },
+              "session_id": {
+                "value": "",
+                "type": "str"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "claude-api",
+        "type": "AnthropicModel",
+        "position": { "x": 400, "y": 100 },
+        "data": {
+          "node": {
+            "template": {
+              "anthropic_api_key": {
+                "value": "${CLAUDE_API_KEY}",
+                "type": "str",
+                "password": true
+              },
+              "model": {
+                "value": "claude-3-sonnet-20240229",
+                "type": "str"
+              },
+              "max_tokens": {
+                "value": 1000,
+                "type": "int"
+              },
+              "temperature": {
+                "value": 0.1,
+                "type": "float"
+              },
+              "system_message": {
+                "value": "You are a helpful mortgage assistant for OP Bank in Finland. You help customers with mortgage applications, interest rates, payment calculations, and loan processes. You are knowledgeable about Finnish banking regulations and OP Bank's specific products. Always be professional, helpful, and accurate. If you don't know specific current rates or policies, direct customers to contact OP Bank directly.",
+                "type": "str"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "memory",
+        "type": "ConversationBufferMemory",
+        "position": { "x": 250, "y": 200 },
+        "data": {
+          "node": {
+            "template": {
+              "memory_key": {
+                "value": "chat_history",
+                "type": "str"
+              },
+              "return_messages": {
+                "value": true,
+                "type": "bool"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "prompt-template",
+        "type": "PromptTemplate",
+        "position": { "x": 250, "y": 50 },
+        "data": {
+          "node": {
+            "template": {
+              "template": {
+                "value": "You are a mortgage assistant for OP Bank. Current context:\n\nCustomer Information:\n- Name: {customer_name}\n- Annual Income: {annual_income}\n- Credit Score: {credit_score}\n- Loan Amount: {loan_amount}\n- Interest Rate: {interest_rate}\n- Monthly Payment: {monthly_payment}\n\nConversation History:\n{chat_history}\n\nCustomer Question: {human_input}\n\nProvide helpful, accurate information about mortgages, OP Bank services, and guide the customer through their mortgage application process. Be conversational and supportive.",
+                "type": "str"
+              },
+              "customer_name": {
+                "value": "Theresa Stewart",
+                "type": "str"
+              },
+              "annual_income": {
+                "value": "$73,305",
+                "type": "str"
+              },
+              "credit_score": {
+                "value": "589",
+                "type": "str"
+              },
+              "loan_amount": {
+                "value": "$50,333",
+                "type": "str"
+              },
+              "interest_rate": {
+                "value": "30.1%",
+                "type": "str"
+              },
+              "monthly_payment": {
+                "value": "$1,815",
+                "type": "str"
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "chat-output",
+        "type": "ChatOutput",
+        "position": { "x": 700, "y": 100 },
+        "data": {
+          "node": {
+            "template": {
+              "input_value": {
+                "value": "",
+                "type": "str"
+              },
+              "sender": {
+                "value": "AI",
+                "type": "str"
+              },
+              "sender_name": {
+                "value": "Mortgage Assistant",
+                "type": "str"
+              },
+              "session_id": {
+                "value": "",
+                "type": "str"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "source": "chat-input",
+        "target": "prompt-template",
+        "sourceHandle": "output",
+        "targetHandle": "human_input"
+      },
+      {
+        "id": "e2",
+        "source": "memory",
+        "target": "prompt-template",
+        "sourceHandle": "output",
+        "targetHandle": "chat_history"
+      },
+      {
+        "id": "e3",
+        "source": "prompt-template",
+        "target": "claude-api",
+        "sourceHandle": "output",
+        "targetHandle": "input"
+      },
+      {
+        "id": "e4",
+        "source": "claude-api",
+        "target": "chat-output",
+        "sourceHandle": "output",
+        "targetHandle": "input_value"
+      },
+      {
+        "id": "e5",
+        "source": "chat-input",
+        "target": "memory",
+        "sourceHandle": "output",
+        "targetHandle": "input"
+      },
+      {
+        "id": "e6",
+        "source": "claude-api",
+        "target": "memory",
+        "sourceHandle": "output",
+        "targetHandle": "output"
+      }
+    ]
+  }
+}
