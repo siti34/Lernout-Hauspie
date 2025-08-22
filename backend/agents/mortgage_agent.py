@@ -17,7 +17,8 @@ app = FastAPI(title="OP Bank Mortgage Assistant")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[        
-        "http://localhost:8080",    # Your actual frontend port
+        "http://localhost:8080",
+        "https://lh-mortgage.netlify.app",    # Your actual frontend port
         "http://127.0.0.1:8080",
         "http://localhost:3000", 
         "http://127.0.0.1:3000",

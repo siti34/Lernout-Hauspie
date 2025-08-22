@@ -15,7 +15,7 @@ export class APIError extends Error {
   }
 }
 
-const BACKEND_BASE_URL = 'http://127.0.0.1:8000';
+const BACKEND_BASE_URL = 'https://lernout-hauspie.onrender.com';
 
 export function getOrCreateSessionId(): string {
   if (typeof window === 'undefined') return 'server_session';
