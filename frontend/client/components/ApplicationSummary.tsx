@@ -48,7 +48,7 @@ export default function ApplicationSummary({ onBack, onSubmit, onEdit }: Applica
       {/* Assistant Message */}
       <div className="px-4 py-4">
         <div className="mb-1">
-          <span className="text-sm text-mortgage-brown">OP Mortgage Assistant</span>
+          <span className="text-sm text-mortgage-brown">Mortgage Assistant</span>
         </div>
         <div className="rounded-xl bg-mortgage-cream p-3">
           <p className="text-base leading-6 text-mortgage-dark">

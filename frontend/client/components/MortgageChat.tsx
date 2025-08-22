@@ -301,7 +301,7 @@
 //           {/* ...svg... */}
 //         </button>
 //         <h1 className="flex-1 pr-10 text-center text-base font-bold leading-6 text-mortgage-dark">
-//           {'OP Mortgage Assistant Chat'}
+//           {'Mortgage Assistant Chat'}
 //         </h1>
 //       </div>
 
@@ -348,7 +348,7 @@
 //               <div className={`max-w-[280px] ${message.sender === 'user' ? 'ml-12' : 'mr-12'}`}>
 //                 <div className="mb-1">
 //                   <span className={`text-sm ${message.sender === 'user' ? 'text-right' : 'text-left'} text-mortgage-brown`}>
-//                     {message.sender === 'user' ? 'You' : 'OP Mortgage Assistant'}
+//                     {message.sender === 'user' ? 'You' : 'Mortgage Assistant'}
 //                   </span>
 //                 </div>
 //                 <div className={`rounded-xl p-3 ${
@@ -641,7 +641,7 @@ Ready to continue with the full application form?`
       const welcomeMessage: DisplayChatMessage = {
         id: '1',
         sender: 'support',
-        content: "Hello Theresa! I'm your OP Mortgage Assistant. I can help you understand your financing options, answer questions about mortgage loans, and guide you through the application process. How can I assist you today?",
+        content: "Hello Theresa! I'm your Mortgage Assistant. I can help you understand your financing options, answer questions about mortgage loans, and guide you through the application process. How can I assist you today?",
         timestamp: new Date()
       };
       setChatState(prev => ({
@@ -997,7 +997,7 @@ Ready to continue with the full application form?`
           </svg>
         </button>
         <h1 className="flex-1 pr-10 text-center text-base font-bold leading-6 text-mortgage-dark">
-          OP Mortgage Assistant Chat
+          Mortgage Assistant Chat
         </h1>
       </div>
 
@@ -1044,7 +1044,7 @@ Ready to continue with the full application form?`
               <div className={`max-w-[280px] ${message.sender === 'user' ? 'ml-12' : 'mr-12'}`}>
                 <div className="mb-1">
                   <span className={`text-sm ${message.sender === 'user' ? 'text-right' : 'text-left'} text-mortgage-brown`}>
-                    {message.sender === 'user' ? 'You' : 'OP Mortgage Assistant'}
+                    {message.sender === 'user' ? 'You' : 'Mortgage Assistant'}
                   </span>
                 </div>
                 <div className={`rounded-xl p-3 ${

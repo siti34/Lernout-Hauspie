@@ -12,18 +12,18 @@ export default function StartPage({ onStart }: StartPageProps) {
         {/* Logo Circle */}
         <div className="w-32 h-32 bg-orange-500 rounded-full flex items-center justify-center mb-6">
           {/* You can replace this with an img tag when you upload your logo */}
-          <div className="text-white text-4xl font-bold">
-            <img 
+          <div className="text-white text-5xl font-bold">L&H
+            {/* <img 
               src="/OP.png" 
               alt="OP Logo" 
               className="w-32 h-32 object-contain"
-            />
+            /> */}
           </div>
         </div>
 
         {/* App Title */}
         <h1 className="text-2xl font-bold text-gray-800 text-center">
-          OP Mortgage Application
+          Mortgage Application
         </h1>
       </div>
 
