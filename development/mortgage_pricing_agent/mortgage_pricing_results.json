@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-07-29T18:21:37.829616",
+  "scenarios": {
+    "excellent_borrower_stable_market": {
+      "borrower_type": "excellent_borrower",
+      "market_type": "stable_market",
+      "interest_rate": 7.3,
+      "monthly_payment": 3085.0691776440995,
+      "risk_level": "low",
+      "risk_score": 0.0
+    },
+    "good_borrower_stable_market": {
+      "borrower_type": "good_borrower",
+      "market_type": "stable_market",
+      "interest_rate": 7.925,
+      "monthly_payment": 2914.1717394138327,
+      "risk_level": "medium",
+      "risk_score": 12.5
+    },
+    "fair_borrower_volatile_market": {
+      "borrower_type": "fair_borrower",
+      "market_type": "volatile_market",
+      "interest_rate": 9.725,
+      "monthly_payment": 2743.4209778332665,
+      "risk_level": "medium",
+      "risk_score": 17.5
+    },
+    "high_risk_borrower_volatile_market": {
+      "borrower_type": "high_risk_borrower",
+      "market_type": "volatile_market",
+      "interest_rate": 10.85,
+      "monthly_payment": 2681.8682593447757,
+      "risk_level": "high",
+      "risk_score": 40.0
+    },
+    "jumbo_borrower_favorable_market": {
+      "borrower_type": "jumbo_borrower",
+      "market_type": "favorable_market",
+      "interest_rate": 6.8,
+      "monthly_payment": 5215.401505319276,
+      "risk_level": "low",
+      "risk_score": 2.5
+    },
+    "investment_property_competitive_market": {
+      "borrower_type": "investment_property",
+      "market_type": "competitive_market",
+      "interest_rate": 7.975,
+      "monthly_payment": 2196.0675721445937,
+      "risk_level": "medium",
+      "risk_score": 17.5
+    },
+    "first_time_buyer_stable_market": {
+      "borrower_type": "first_time_buyer",
+      "market_type": "stable_market",
+      "interest_rate": 8.8,
+      "monthly_payment": 2299.697851598624,
+      "risk_level": "high",
+      "risk_score": 30.0
+    },
+    "15_year_borrower_favorable_market": {
+      "borrower_type": "15_year_borrower",
+      "market_type": "favorable_market",
+      "interest_rate": 6.3,
+      "monthly_payment": 3440.6012666609527,
+      "risk_level": "low",
+      "risk_score": 2.5
+    }
+  },
+  "summary": {
+    "total_scenarios": 8,
+    "rate_range": {
+      "min": 6.3,
+      "max": 10.85,
+      "avg": 8.209375
+    }
+  }
+}
